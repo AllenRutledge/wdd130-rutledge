@@ -1,2 +1,2 @@
-# wdd130-rutledge
+# Allen Rutledge
 Web Fundamentals WDD130
