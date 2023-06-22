@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>White Water Rafting | Contact Us</title>
+</head>
+<body>
+    <div id="content">
+        <header>
+            <a id="logolink" href="index.html">
+                <img id="logo" src="https://AllenRutledge.github.io/wdd130-rutledge/wwr/images/Picture1.jpg" alt="Logo image">
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="#">Resources</a>
+                <a href="site-plan-rafting.html">Site Plan</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </header>
+        <main>
+          <div id="feedback"></div>
+            <form action="/my-handling-form-page" method="post">
+              <p>Required fields are followed by *.</p>  
+              <ul>
+                  <li>
+                    <label for="name">Name: *</label>
+                    <input type="text" id="name" name="user_name">
+                  </li>
+                  <li>
+                    <label for="mail">Email:</label>
+                    <input type="email" id="mail" name="user_email">
+                  </li>
+                  <li>
+                    <label for="msg">Message:</label>
+                    <textarea id="msg" name="user_message"></textarea>
+                  </li>
+                  <li class="button">
+                    <button type="submit">Send your message</button>
+                  </li>         
+              </ul>
+                <fieldset>
+                  <legend>Shirt size</legend>
+                  <p>
+                    <input type="radio" name="size" id="size_1" value="small">
+                    <label for="size_1">Small</label>
+                  </p>
+                  <p>
+                    <input type="radio" name="size" id="size_2" value="medium">
+                    <label for="size_2">Medium</label>
+                  </p>
+                  <p>
+                    <input type="radio" name="size" id="size_3" value="large">
+                    <label for="size_3">Large</label>
+                  </p>
+                </fieldset>
+                <p>
+                  <input type="checkbox" id="taste_1" name="taste_cherry" value="cherry">
+                  <label for="taste_1">I would like the shirt to be a jersey instead.</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="taste_2" name="taste_banana" value="banana">
+                  <label for="taste_2">I would also like a hat. (+$15)</label>
+                </p>
+            </form>
+        </main>
+        <footer>
+            <p>Whitewater Rafting Company © 2023 - Allen Rutledge</p>
+            <p><a href="index.html">Home</a></p>
+            <p><a href="resources.html">Resources</a></p>
+            <p><a href="site-plan-rafting.html">Site Plan</a></p>
+            <p><a href="contact.html">Contact Us</a></p>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="https://AllenRutledge.github.io/wdd130-rutledge/wwr/images/facebook.png" alt="Facebook icon"></a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="https://AllenRutledge.github.io/wdd130-rutledge/wwr/images/twitter.png" alt="Twitter icon"></a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="https://AllenRutledge.github.io/wdd130-rutledge/wwr/images/instagram.png" alt="Instagram icon"></a>
+            </div>
+        </footer>
+      </div>
+    <script>
+      const feedbackElement = document.getElementById('feedback');
+      const formElement = document.forms[0];
+      formElement.addEventListener('submit',function(e){
+        e.preventDefault();
+        feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value + '! Thank you for filling out this form. We will respond as soon as possible!'
+        feedbackElement.style.display = "block";
+      });
+    </script> 
+</body>
+</html>
